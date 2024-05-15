@@ -2814,12 +2814,21 @@ input, select, textarea {
 	}
 
 		.features li {
-			width: calc(33.33333% - 2em);
-			margin-left: 2em;
-			margin-top: 3em;
-			padding: 0;
+			width: calc(33.33333%);
+			margin-left: 1em;
+			margin-top: 0em;
+			padding: 2em;
 		}
+			.image {
+				display: inline-block;
+				margin-left: 0em;
 
+				img {
+					display: block;
+					border-radius: 100%;
+					width: calc(100%);
+				}
+			}
 			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
 				margin-top: 0;
 			}
