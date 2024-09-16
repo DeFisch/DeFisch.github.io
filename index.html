@@ -10,7 +10,38 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.typing-container {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid orange; /* Cursor */
+            font-family: monospace;
+            font-size: 24px;
+            display: inline-block; /* Ensures cursor position is correct */
+        }
+		</style>
+		 <style>
+			#image-slider {
+				position: relative;
+				width: 50%; /* Adjust based on your layout */
+				overflow: hidden;
+				height: 300px; /* Adjust height as needed */
+			}
+	
+			#image-slider-wrapper {
+				display: flex;
+				transition: transform 0.5s ease-in-out;
+				width: 100%;
+			}
+	
+			#image-slider img {
+				width: 100%;
+				height: auto; /* Ensure images fill the container properly */
+				flex-shrink: 0; /* Prevent images from shrinking */
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -21,9 +52,9 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.png" alt="" /></span>
 						<h1>Daniel (Zhenyang) Feng</h1>
-						<p>Just a fish swimming upstream<br />
-						<a href="https://github.com/DeFisch">GitHub</a><br />
-                        <a href="fengzhenyang47@gmail.com">Email: </a>fengzhenyang47@gmail.com</p>
+						<p>A fish swimming upstream<br /> <br />
+						<a href="https://github.com/DeFisch"><i class="fab fa-github" style="font-size: 40px;">&nbsp;</i></a>
+                        <a href="mailto:fengzhenyang47@gmail.com"><i class="fas fa-envelope" style="font-size: 40px;"></i></a></p>
 					</header>
 
 				<!-- Nav -->
@@ -31,8 +62,7 @@
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
 							<li><a href="#first">Projects</a></li>
-							<li><a href="#second">Second Section</a></li>
-							<li><a href="#cta">Get Started</a></li>
+							<li><a href="#second">Publications</a></li>
 						</ul>
 					</nav>
 
@@ -44,13 +74,48 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Hello！你好！こんにちは！</h2>
+											<h3 id="typewriter" class="typing-container"></h3>
+
+											<script>
+												const messages = [
+													"Hi！ Welcome to my personal site!",
+													"你好！我中文名叫冯振洋！",
+													"こんにちは！日本語を勉強中🙇‍♂️",
+													"안녕하세요！"
+												];
+												const element = document.getElementById('typewriter');
+												let messageIndex = 0;
+												let charIndex = 0;
+										
+												function type() {
+													if (charIndex < messages[messageIndex].length) {
+														element.innerHTML += messages[messageIndex].charAt(charIndex);
+														charIndex++;
+														setTimeout(type, 100); // Adjust typing speed here
+													} else {
+														setTimeout(erase, 2000); // Wait before starting to erase
+													}
+												}
+										
+												function erase() {
+													if (charIndex > 0) {
+														element.innerHTML = messages[messageIndex].substring(0, charIndex - 1);
+														charIndex--;
+														setTimeout(erase, 50); // Adjust erasing speed here
+													} else {
+														messageIndex = (messageIndex + 1) % messages.length; // Move to the next message
+														setTimeout(type, 500); // Wait before starting the typing again
+													}
+												}
+										
+												type();
+											</script>
 										</header>
-										<p>I'm a second year Computer Science undergrad in the Ohio State University.
+										<p>I'm a third/final year Computer Science undergrad in the Ohio State University.
                                             Currently I'm working under <a href="https://sites.google.com/view/wei-lun-harry-chao"> Dr. Wei-Lun Chao</a>'s lab focusing on computer vision, or more specifically, autonomous driving 🚗🚗🚗.
-                                            I'm also a team member of Buckeye AutoDrive, responsible for handling perception logics.</p>
+                                            I'm also a co-lead of Buckeye AutoDrive's perception team, responsible for handling perception logistics.</p>
 										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
+											<a href="cv/CV.pdf" class="button">My CV here</a>
 										</ul>
 									</div>
 									<span class="image"><img src="images/pic07.jpg" alt="" /></span>
@@ -60,7 +125,7 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>My Projects</h2>
+									<h2>Projects</h2>
 								</header>
 								<ul class="features">
 									<li>
@@ -72,100 +137,74 @@
 										</ul>
 									</li>
 									<li>
-										<span class="image"><img style="border-radius: 100%;width: 100%;" src="images/pic01.jpg" alt="" /></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="image"><img style="border-radius: 100%;width: 100%;" src="images/pic01.jpg" alt="" /></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<span class="image"><img style="border-radius: 100%;width: 100%;height: 100%;" src="images/dino_samv2.gif" alt="" /></span>
+										<h3>Ongoing Projects 🛠️</h3>
+										<p>Currently, I'm interested in the amazing tracking/object segmentation abilities of SAM 2, and trying to leverage its strength towards biology and autonomous driving fields. </p>
+										<!-- <ul class="actions">
+											<a style="margin: auto;" href="AutoDrive.html" class="button">Learn More</a>
+										</ul> -->
 									</li>
 								</ul>
 							</section>
 
 						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-					</div>
-
+						<section id="second" class="main special">
+							<header class="major">
+								<h2>Publications ✍️</h2>
+								<!-- <p>Google Scholar</p> -->
+							</header>
+							
+							<!-- Container for papers and image -->
+							<div style="display: flex; justify-content: space-between; align-items: center; background-color: ivory;">
+								
+								<!-- Paper information on the left -->
+								<div id="papers" style="flex: 1; padding-right: 1em;">
+									<!-- Left-align paper title -->
+									<cite id="Jinsu" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
+										Learning 3D Perception from Others' Predictions
+									</cite>
+									<p style="font-size: medium; text-align: left;">
+										Jinsu Yoo, <b>Zhenyang Feng</b>, Tai-Yu Pan, Yihong Sun, Cheng Perng Phoo, Xiangyu Chen, 
+										Mark Campbell, Kilian Q Weinberger, Bharath Hariharan, Wei-Lun Chao
+									</p>
+									<!-- Conference information -->
+									<p style="font-size: small; font-style: italic; text-align: left;">
+										Conference on Neural Information Processing Systems (NeurIPS), 2024  (Under Review)
+									</p>
+								</div>
+								
+								<!-- Project image on the right -->
+								<div id="image-slider">
+									<div id="image-slider-wrapper">
+										<img src="images/r_and_b.png" alt="Publication Image 1">
+										<img src="images/r_and_b2.png" alt="Publication Image 2">
+										<img src="images/r_and_b3.png" alt="Publication Image 3">
+										<!-- Add more images as needed -->
+									</div>
+								</div>
+							
+								<script>
+									const sliderWrapper = document.getElementById('image-slider-wrapper');
+									const images = sliderWrapper.children;
+									const imageCount = images.length;
+									let currentIndex = 0;
+							
+									function moveToNextImage() {
+										currentIndex = (currentIndex + 1) % imageCount;
+										const offset = -currentIndex * 100; // Move by 100% of the container width
+										sliderWrapper.style.transform = `translateX(${offset}%)`;
+									}
+							
+									setInterval(moveToNextImage, 3000); // Change image every 3 seconds
+								</script>
+								
+							</div>
+						</section>						
+						
+						
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; 2024, Daniel Feng. <br /> Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>

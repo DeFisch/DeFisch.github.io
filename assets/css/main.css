@@ -99,12 +99,15 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-	}
+		background-color: #000000;
+		background-image: 
+			url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAB0lEQVR42mP8/wcAAwAB/ujMTwAAAABJRU5ErkJggg=="), /* Binary pattern */
+			linear-gradient(45deg, #000000 0%, #404040 100%);
+		background-repeat: repeat, no-repeat;
+		background-size: 20px 20px, cover;
+		background-position: 0 0, 0 0;
+	}		
+	
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -2359,6 +2362,19 @@ input, select, textarea {
 		.icon.alt:active {
 			background-color: rgba(255, 255, 255, 0.2);
 		}
+
+/* Publication */
+
+	.publication {
+		margin-bottom: 20px;
+	}
+	.publication-title {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.authors, .journal, .year, .doi {
+		margin-top: 5px;
+	}
 
 /* Image */
 
