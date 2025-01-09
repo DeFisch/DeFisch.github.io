@@ -8,7 +8,8 @@
 	<head>
 		<title>Daniel Feng</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+		<meta name="viewport" content="width=1024">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -25,12 +26,35 @@
             font-size: 24px;
             display: inline-block; /* Ensures cursor position is correct */
         }
+
+		#scrollable-papers {
+			height: 500px; /* Adjust height as needed */
+			overflow-y: auto; /* Enable vertical scrolling */
+			border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+			padding: 10px;
+			background-color: #f9f9f9; /* Optional: Add a background color */
+		}
+
+		.paper {
+			margin-bottom: 20px; /* Add space between papers */
+		}
+
 		.image-cropper {
 		width: 100px;
 		height: 100px;
 		position: relative;
 		overflow: hidden;
 		border-radius: 50%;
+		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+		}
+
+		.image-cropper:hover {
+			transform: scale(1.1); /* Slightly enlarge the profile */
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+		}
+
+		.image-cropper:hover img.rounded {
+			transform: scale(1.15); /* Slightly enlarge the image */
 		}
 
 		img {
@@ -45,28 +69,29 @@
 		border-radius: 50%;
 		height: auto;
 		width: 25%;
+		transition: transform 0.3s ease; /* Smooth scaling for the image */
 		}
 		</style>
 		 <style>
-			#image-slider {
-				position: relative;
-				width: 40%; /* Adjust based on your layout */
-				overflow: hidden;
-				height: 300px; /* Adjust height as needed */
-			}
-	
-			#image-slider-wrapper {
-				display: flex;
-				transition: transform 0.5s ease-in-out;
-				width: 100%;
-			}
-	
-			#image-slider img {
-				width: 100%;
-				height: auto; /* Ensure images fill the container properly */
-				flex-shrink: 0; /* Prevent images from shrinking */
-			}
-		</style>
+			.image-slider {
+            position: relative;
+            width: 40%;
+            overflow: hidden;
+            height: 40%;
+        }
+
+        .image-slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .image-slider img {
+            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 	</head>
 	<body class="is-preload">
 
@@ -142,7 +167,8 @@
 											</script>
 										</header>
 										<p>I'm a third/final year Computer Science undergrad in the Ohio State University.
-                                            Currently I'm working under <a href="https://sites.google.com/view/wei-lun-harry-chao"> Dr. Wei-Lun Chao</a>'s lab focusing on computer vision, or more specifically, autonomous driving 🚗🚗🚗.
+                                            Currently I'm working under <a href="https://sites.google.com/view/wei-lun-harry-chao"> Dr. Wei-Lun (Harry) Chao</a>'s lab focusing on computer vision,
+											especially in the field of AI for science 🦋 and autonomous driving 🚘.
                                             I'm also a co-lead of Buckeye AutoDrive's perception team, responsible for handling perception logistics.</p>
 										<ul class="actions">
 											<a href="cv/CV.pdf" class="button">My CV here</a>
@@ -167,9 +193,9 @@
 										</ul>
 									</li>
 									<li>
-										<span class="image"><img style="border-radius: 100%;width: 100%;height: 100%;" src="images/dino_samv2.gif" alt="" /></span>
-										<h3>Ongoing Projects 🛠️</h3>
-										<p>Currently, I'm interested in the amazing tracking/object segmentation abilities of SAM 2, and trying to leverage its strength towards biology and autonomous driving fields. </p>
+										<span class="image"><img style="border-radius: 100%;width: 100%;height: 100%;" src="images/SST/SST_project.gif" alt="" /></span>
+										<h3>Imageomics</h3>
+										<p>Machine learning on biological image data to accelerate trait analysis, discovery, and public engagement in science.</p>
 										<!-- <ul class="actions">
 											<a style="margin: auto;" href="AutoDrive.html" class="button">Learn More</a>
 										</ul> -->
@@ -183,11 +209,11 @@
 								<h2>Publications ✍️</h2>
 								<!-- <p>Google Scholar</p> -->
 							</header>
-							
-							<!-- Container for papers and image -->
-							<div style="display: flex; justify-content: space-between; align-items: center; background-color: ivory;">
-								
-								<div id="papers" style="flex: 1; padding-right: 1em;">
+
+							<div id="scrollable-papers">
+							<!-- First Paper with Image Slider -->
+							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; background-color: ivory; margin-bottom: 20px;">
+								<div style="flex: 1; padding-right: 1em;">
 									<cite id="Jinsu" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
 										Learning 3D Perception from Others' Predictions
 									</cite>
@@ -195,38 +221,106 @@
 										Jinsu Yoo, <b>Zhenyang Feng</b>, Tai-Yu Pan, Yihong Sun, Cheng Perng Phoo, Xiangyu Chen, 
 										Mark Campbell, Kilian Q Weinberger, Bharath Hariharan, Wei-Lun Chao
 									</p>
-									<p style="font-size: small; font-style: italic; text-align: left;">
-										
-									</p>
 									<p style="font-size: small; text-align: left;">
+										<a href="https://jinsuyoo.info/rnb-pop/" target="_blank">[website]</a> 
 										<a href="https://arxiv.org/abs/2410.02646" target="_blank">[arXiv]</a>
 									</p>
 								</div>
-								
-								<div id="image-slider">
-									<div id="image-slider-wrapper">
+								<div id="image-slider-1" class="image-slider">
+									<div class="image-slider-wrapper">
 										<img src="images/r_and_b.png" alt="Publication Image 1">
 										<img src="images/r_and_b2.png" alt="Publication Image 2">
 										<img src="images/r_and_b3.png" alt="Publication Image 3">
 									</div>
 								</div>
-							
-								<script>
-									const sliderWrapper = document.getElementById('image-slider-wrapper');
+							</div>
+
+							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; background-color: ivory; margin-bottom: 20px;">
+								<div style="flex: 1; padding-right: 1em;">
+									<cite id="SST" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
+										Static Segmentation by Tracking: A Frustratingly Label-Efficient Approach to Fine-Grained Segmentation
+									</cite>
+									<p style="font-size: medium; text-align: left;">
+										<b>Zhenyang Feng</b>, Zihe Wang, Saul Ibaven Bueno, Tomasz Frelek, Advikaa Ramesh, Jingyan Bai, Lemeng Wang, 
+										Jianyang Gu, Zanming Huang, Jinsu Yoo, Tai-Yu Pan, Arpita Chowdhury, Michelle Ramirez, Elizabeth G Campolongo, 
+										Matthew J Thompson, Christopher G. Lawrence, Sydne Record, Neil Rosser, Anuj Karpatne, Daniel Rubenstein, Hilmar Lapp, 
+										Charles V. Stewart, Tanya Berger-Wolf, Yu Su, Wei-Lun Chao
+									</p>
+									<p style="font-size: small; text-align: left;">
+										<a href="https://drive.google.com/file/d/1V8tbV9y4CVPSeu_m3ulX7t4-QAYd7p7i/view?usp=drive_link" target="_blank">[google drive]</a>
+									</p>
+								</div>
+								<div id="image-slider-2" class="image-slider">
+									<div class="image-slider-wrapper">
+										<img src="images/SST/fig_1.png" alt="Publication Image 1">
+										<img src="images/SST/fig_2.png" alt="Publication Image 2">
+										<img src="images/SST/fig_3.png" alt="Publication Image 3">
+									</div>
+								</div>
+							</div>
+
+							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; background-color: ivory; margin-bottom: 20px;">
+								<div style="flex: 1; padding-right: 1em;">
+									<cite id="TYP" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
+										Transfer Your Perspective: Controllable 3D Generation from Any Viewpoint in a Driving Scene
+									</cite>
+									<p style="font-size: medium; text-align: left;">
+										Tai-Yu Pan, Sooyoung Jeon, Mengdi Fan, Jinsu Yoo, <b>Zhenyang Feng</b>, Mark Campbell, Kilian Q Weinberger, Bharath Hariharan, Wei-Lun Chao
+									</p>
+									<p style="font-size: small; text-align: left;">
+										<a href="https://drive.google.com/file/d/1MwSYqcRDxrHrrq6qknUXNaM7WhBjKkge/view?usp=drive_link" target="_blank">[google drive]</a>
+									</p>
+								</div>
+								<div id="image-slider-2" class="image-slider">
+									<div class="image-slider-wrapper">
+										<img src="images/TYP/pipeline.png" alt="Publication Image 1">
+									</div>
+								</div>
+							</div>
+
+							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; background-color: ivory; margin-bottom: 20px;">
+								<div style="flex: 1; padding-right: 1em;">
+									<cite id="TYP" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
+										Fish-Vista: A Multi-Purpose Dataset for Understanding & Identification of Traits from Images
+									</cite>
+									<p style="font-size: medium; text-align: left;">
+										Kazi Sajeed Mehrab, M. Maruf, Arka Daw, Abhilash Neog, Harish Babu Manogaran, Mridul Khurana, <b>Zhenyang Feng</b>, Bahadir Altintas, 
+										Yasin Bakis, Elizabeth G Campolongo, Matthew J Thompson, Xiaojun Wang, Hilmar Lapp, Tanya Berger-Wolf, Paula Mabee, Henry Bart, 
+										Wei-Lun Chao, Wasila M Dahdul, Anuj Karpatne
+									</p>
+									<p style="font-size: small; text-align: left;">
+										<a href="https://drive.google.com/file/d/1f1qKXRxWHBMK_IUue8MXzO-grB4tz_k9/view?usp=drive_link" target="_blank">[google drive]</a>
+									</p>
+								</div>
+								<div id="image-slider-2" class="image-slider">
+									<div class="image-slider-wrapper">
+										<img src="images/Fish-Vista/image.png" alt="Publication Image 1">
+									</div>
+								</div>
+							</div>
+
+							<script>
+								function createSlider(sliderId) {
+									const sliderWrapper = document.querySelector(`#${sliderId} .image-slider-wrapper`);
 									const images = sliderWrapper.children;
 									const imageCount = images.length;
 									let currentIndex = 0;
 							
 									function moveToNextImage() {
 										currentIndex = (currentIndex + 1) % imageCount;
-										const offset = -currentIndex * 100; // Move by 100% of the container width
+										const offset = -currentIndex * 100; // Slide by 100% width
 										sliderWrapper.style.transform = `translateX(${offset}%)`;
 									}
 							
-									setInterval(moveToNextImage, 3000); // Change image every 3 seconds
-								</script>
-								
-							</div>
+									setInterval(moveToNextImage, 5000); // Change every 3 seconds
+								}
+							
+								// Initialize sliders
+								createSlider('image-slider-1');
+								createSlider('image-slider-2');
+							</script>
+							
+						</div>
 						</section>						
 						
 						
