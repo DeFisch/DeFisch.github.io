@@ -2665,7 +2665,7 @@ input, select, textarea {
 				content: '';
 				width: 3.25em;
 				height: 2px;
-				margin: 0.7em 0 1em 0;
+				margin: 0em 0 0em 0;
 				border-radius: 2px;
 			}
 
@@ -2824,14 +2824,14 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		width: calc(100% + 2em);
-		margin: 0 0 3em -2em;
+		margin: 0 0 -2em -2em;
 		padding: 0;
 		list-style: none;
 	}
 
 		.features li {
 			width: calc(33.33333%);
-			margin-left: 0em;
+			margin-left: 2em;
 			margin-top: 0em;
 			padding: 2em;
 		}
