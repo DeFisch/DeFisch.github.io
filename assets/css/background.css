@@ -7,7 +7,7 @@
   height: 100vh;
   overflow: hidden; /* Ensures particles don't overflow outside */
   z-index: -1; /* Keeps it behind all content */
-  background: #141107; /* Ensure the background is transparent */
+  background: linear-gradient(to top, #0a1a33, #1c3d5a); /* Gradient from deep sea to shallow sea */
 }
 
 /* Particle styles */
@@ -15,7 +15,7 @@
   position: absolute;
   width: 8px;  /* Adjust width for a rectangular pixel shape */
   height: 8px; /* Adjust height for a pixelated look */
-  background-color: orange; /* Fire-like color */
+  background-color: #5dade2; /* Cool blue particle color */
   opacity: 0;
   animation: riseAndFade 20s infinite ease-in-out; /* Increased duration to 20 seconds */
   transform-origin: center center; /* Ensures the particle's scaling happens from the center */
@@ -45,5 +45,5 @@ html, body {
   padding: 0;
   width: 100%;
   min-height: 100%;
-  background-color: transparent; /* Set to black or any desired background color */
+  background-color: transparent; /* Deep oceanic blue for body */
 }

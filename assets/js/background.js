@@ -20,8 +20,7 @@ function generateParticles() {
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
 
-    // Randomize color (yellow to orange to red)
-    const colors = ['#FFD700', '#FFA500', '#FF4500'];
+    const colors = ['#5dade2', '#48c9b0', '#1c3d5a'];
     particle.style.background = colors[Math.floor(Math.random() * colors.length)];
 
     // Randomize animation duration and delay
