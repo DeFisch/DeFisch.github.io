@@ -98,15 +98,15 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
+	/* body {
 		background-color: #000000;
 		background-image: 
-			url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAB0lEQVR42mP8/wcAAwAB/ujMTwAAAABJRU5ErkJggg=="), /* Binary pattern */
+			url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAB0lEQVR42mP8/wcAAwAB/ujMTwAAAABJRU5ErkJggg=="),
 			linear-gradient(45deg, #000000 0%, #404040 100%);
 		background-repeat: repeat, no-repeat;
 		background-size: 20px 20px, cover;
 		background-position: 0 0, 0 0;
-	}		
+	}		 */
 	
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {

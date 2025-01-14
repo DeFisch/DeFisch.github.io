@@ -1,0 +1,49 @@
+/* Particle container */
+#particle-container {
+  position: fixed; /* Fixes the particles to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Ensures particles don't overflow outside */
+  z-index: -1; /* Keeps it behind all content */
+  background: #141107; /* Ensure the background is transparent */
+}
+
+/* Particle styles */
+.particle {
+  position: absolute;
+  width: 8px;  /* Adjust width for a rectangular pixel shape */
+  height: 8px; /* Adjust height for a pixelated look */
+  background-color: orange; /* Fire-like color */
+  opacity: 0;
+  animation: riseAndFade 20s infinite ease-in-out; /* Increased duration to 20 seconds */
+  transform-origin: center center; /* Ensures the particle's scaling happens from the center */
+}
+
+/* Particle animation: Rising and fading out */
+@keyframes riseAndFade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(20px, -10vh) scale(1); /* Smaller distance */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-20px, -20vh) scale(0.8); /* Smaller distance */
+  }
+}
+
+/* Set a background color to body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: transparent; /* Set to black or any desired background color */
+}
