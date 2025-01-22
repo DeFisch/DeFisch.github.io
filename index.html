@@ -91,6 +91,26 @@
             width: 100%;
             height: auto;
         }
+
+		#scrollable-news {
+			height: 50px; /* Adjust height as needed */
+			overflow-y: auto; /* Enable vertical scrolling */
+			padding: 10px;
+			background-color: #f9f9f9; /* Optional: Background color */
+			border: 1px solid #ccc; /* Optional: Border for better visibility */
+			border-radius: 8px; /* Optional: Rounded corners */
+			text-align: left; /* Align text to the left */
+		}
+
+		.news-item {
+			margin-bottom: 2px; /* Add space between news items */
+		}
+
+		.news-item p {
+			font-size: medium;
+			margin: 0; /* Remove extra spacing around the text */
+			white-space: nowrap; /* Prevent text wrapping */
+		}
     </style>
 	</head>
 	<body class="is-preload">
@@ -115,6 +135,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#news">News</a></li>
 							<li><a href="#first">Projects</a></li>
 							<li><a href="#second">Publications</a></li>
 						</ul>
@@ -177,10 +198,21 @@
 								</div>
 							</section>
 
+							<section id="news" class="main special">
+								<header class="major">
+									<h2>News 📰</h2>
+								</header>
+								<div id="scrollable-news">
+									<div class="news-item">
+										<p>01/2025: Our work on collaborative driving and label-efficient learning are accepted to ICLR 2025!</p>
+									</div>
+								</div>
+							</section>
+
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Projects</h2>
+									<h2>Projects 🔨</h2>
 								</header>
 								<ul class="features">
 									<li>
@@ -220,7 +252,10 @@
 										Jinsu Yoo, <b>Zhenyang Feng</b>, Tai-Yu Pan, Yihong Sun, Cheng Perng Phoo, Xiangyu Chen, 
 										Mark Campbell, Kilian Q Weinberger, Bharath Hariharan, Wei-Lun Chao
 									</p>
-									<p style="font-size: small; text-align: left;">
+									<p style="font-size: medium; text-align: left; margin-top: -1em;">
+										International Conference on Learning Representations (<b>ICLR</b>), 2025
+									</p>	
+									<p style="font-size: small; text-align: left; margin-top: -1em;">
 										<a href="https://jinsuyoo.info/rnb-pop/" target="_blank">[project page]</a> 
 										<a href="https://arxiv.org/abs/2410.02646" target="_blank">[arXiv]</a>
 									</p>
@@ -245,7 +280,10 @@
 										Matthew J Thompson, Christopher G. Lawrence, Sydne Record, Neil Rosser, Anuj Karpatne, Daniel Rubenstein, Hilmar Lapp, 
 										Charles V. Stewart, Tanya Berger-Wolf, Yu Su, Wei-Lun Chao
 									</p>
-									<p style="font-size: small; text-align: left;">
+									<p style="font-size: medium; text-align: left; margin-top: -1em;">
+										arXiv Preprint
+									</p>	
+									<p style="font-size: small; text-align: left; margin-top: -1em;">
 										<a href="https://arxiv.org/abs/2501.06749" target="_blank">[arXiv]</a>
 									</p>
 								</div>
@@ -265,8 +303,8 @@
 									</cite>
 									<p style="font-size: medium; text-align: left;">
 										Tai-Yu Pan, Sooyoung Jeon, Mengdi Fan, Jinsu Yoo, <b>Zhenyang Feng</b>, Mark Campbell, Kilian Q Weinberger, Bharath Hariharan, Wei-Lun Chao
-									</p>
-									<p style="font-size: small; text-align: left;">
+									</p>	
+									<p style="font-size: small; text-align: left; margin-top: -1em;">
 										<a href="https://drive.google.com/file/d/1MwSYqcRDxrHrrq6qknUXNaM7WhBjKkge/view?usp=drive_link" target="_blank">[google drive]</a>
 									</p>
 								</div>
@@ -287,7 +325,7 @@
 										Yasin Bakis, Elizabeth G Campolongo, Matthew J Thompson, Xiaojun Wang, Hilmar Lapp, Tanya Berger-Wolf, Paula Mabee, Henry Bart, 
 										Wei-Lun Chao, Wasila M Dahdul, Anuj Karpatne
 									</p>
-									<p style="font-size: small; text-align: left;">
+									<p style="font-size: small; text-align: left; margin-top: -1em;">
 										<a href="https://drive.google.com/file/d/1f1qKXRxWHBMK_IUue8MXzO-grB4tz_k9/view?usp=drive_link" target="_blank">[google drive]</a>
 									</p>
 								</div>

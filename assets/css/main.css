@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap";
 
 /*
 	Stellar by HTML5 UP
@@ -128,7 +128,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -173,7 +173,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 800;
 	}
 
 	em, i {
@@ -197,9 +197,9 @@ input, select, textarea {
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.5;
-		margin: 0 0 0.7em 0;
+		margin: 0 0 0 0;
 		letter-spacing: -0.025em;
 	}
 
@@ -1846,7 +1846,7 @@ input, select, textarea {
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 300;
+		font-weight: 400;
 		height: 2.75em;
 		line-height: 2.75em;
 		min-width: 9.25em;
@@ -2077,7 +2077,7 @@ input, select, textarea {
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
-			font-weight: 300;
+			font-weight: 400;
 			padding-left: 2.4em;
 			padding-right: 0.75em;
 			position: relative;
@@ -2653,7 +2653,8 @@ input, select, textarea {
 	}
 
 	header.major {
-		margin-bottom: 3em;
+		margin-top: -4em;
+		margin-bottom: 1em;
 	}
 
 		header.major h2 {
@@ -2924,7 +2925,7 @@ input, select, textarea {
 				font-size: 2em;
 				line-height: 1.1;
 				color: inherit !important;
-				font-weight: 300;
+				font-weight: 400;
 				letter-spacing: -0.025em;
 			}
 
@@ -3707,7 +3708,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 5em 5em 3em 5em ;
+		padding: 0em 5em 0em 5em ;
 		width: calc(100% + 2em);
 		margin: 0 0 3em -2em;
 	}
