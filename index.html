@@ -82,9 +82,18 @@
 
         .image-slider-wrapper {
             display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
+			transition: opacity 1s ease-in-out;
+			opacity: 1;
+		}
+
+		.image-slider-wrapper img {
+			width: 100%;
         }
+
+		.image-slider-wrapper img:first-child {
+			opacity: 1;
+		}
+
 
         .image-slider img {
             flex-shrink: 0;
@@ -93,7 +102,7 @@
         }
 
 		#scrollable-news {
-			height: 50px; /* Adjust height as needed */
+			height: 100px; /* Adjust height as needed */
 			overflow-y: auto; /* Enable vertical scrolling */
 			padding: 10px;
 			background-color: #f9f9f9; /* Optional: Background color */
@@ -204,6 +213,8 @@
 								</header>
 								<div id="scrollable-news">
 									<div class="news-item">
+										<p>03/2025: 2 works accepted in CVPR 2025!</p>
+
 										<p>01/2025: Our work on collaborative driving and label-efficient learning are accepted to ICLR 2025!</p>
 									</div>
 								</div>
@@ -262,9 +273,7 @@
 								</div>
 								<div id="image-slider-1" class="image-slider">
 									<div class="image-slider-wrapper">
-										<img src="images/r_and_b.png" alt="Publication Image 1">
-										<img src="images/r_and_b2.png" alt="Publication Image 2">
-										<img src="images/r_and_b3.png" alt="Publication Image 3">
+										<img src="images/r_and_b/rnbpop-teaser.gif" alt="Publication Image 1">
 									</div>
 								</div>
 							</div>
@@ -287,11 +296,9 @@
 										<a href="https://arxiv.org/abs/2501.06749" target="_blank">[arXiv]</a>
 									</p>
 								</div>
-								<div id="image-slider-2" class="image-slider">
+								<div id="image-slider-1" class="image-slider">
 									<div class="image-slider-wrapper">
-										<img src="images/SST/fig_1.png" alt="Publication Image 1">
-										<img src="images/SST/fig_2.png" alt="Publication Image 2">
-										<img src="images/SST/fig_3.png" alt="Publication Image 3">
+										<img src="images/SST/SST.gif" alt="Publication Image 1">
 									</div>
 								</div>
 							</div>
@@ -303,9 +310,12 @@
 									</cite>
 									<p style="font-size: medium; text-align: left;">
 										Tai-Yu Pan, Sooyoung Jeon, Mengdi Fan, Jinsu Yoo, <b>Zhenyang Feng</b>, Mark Campbell, Kilian Q Weinberger, Bharath Hariharan, Wei-Lun Chao
+									</p>
+									<p style="font-size: medium; text-align: left; margin-top: -1em;">
+										IEEE / CVF Computer Vision and Pattern Recognition Conference (<b>CVPR</b>), 2025
 									</p>	
 									<p style="font-size: small; text-align: left; margin-top: -1em;">
-										<a href="https://drive.google.com/file/d/1MwSYqcRDxrHrrq6qknUXNaM7WhBjKkge/view?usp=drive_link" target="_blank">[google drive]</a>
+										<a href="https://arxiv.org/abs/2502.06682" target="_blank">[arXiv]</a>
 									</p>
 								</div>
 								<div id="image-slider-2" class="image-slider">
@@ -325,8 +335,11 @@
 										Yasin Bakis, Elizabeth G Campolongo, Matthew J Thompson, Xiaojun Wang, Hilmar Lapp, Tanya Berger-Wolf, Paula Mabee, Henry Bart, 
 										Wei-Lun Chao, Wasila M Dahdul, Anuj Karpatne
 									</p>
+									<p style="font-size: medium; text-align: left; margin-top: -1em;">
+										IEEE / CVF Computer Vision and Pattern Recognition Conference (<b>CVPR</b>), 2025
+									</p>	
 									<p style="font-size: small; text-align: left; margin-top: -1em;">
-										<a href="https://drive.google.com/file/d/1f1qKXRxWHBMK_IUue8MXzO-grB4tz_k9/view?usp=drive_link" target="_blank">[google drive]</a>
+										<a href="https://arxiv.org/abs/2407.08027" target="_blank">[arXiv]</a>
 									</p>
 								</div>
 								<div id="image-slider-2" class="image-slider">
@@ -336,27 +349,6 @@
 								</div>
 							</div>
 
-							<script>
-								function createSlider(sliderId) {
-									const sliderWrapper = document.querySelector(`#${sliderId} .image-slider-wrapper`);
-									const images = sliderWrapper.children;
-									const imageCount = images.length;
-									let currentIndex = 0;
-							
-									function moveToNextImage() {
-										currentIndex = (currentIndex + 1) % imageCount;
-										const offset = -currentIndex * 100; // Slide by 100% width
-										sliderWrapper.style.transform = `translateX(${offset}%)`;
-									}
-							
-									setInterval(moveToNextImage, 5000); // Change every 3 seconds
-								}
-							
-								// Initialize sliders
-								createSlider('image-slider-1');
-								createSlider('image-slider-2');
-							</script>
-							
 						</div>
 						</section>						
 						
