@@ -40,8 +40,9 @@
 		}
 
 		.image-cropper {
-		width: 100px;
-		height: 100px;
+		display: inline-block;
+		width: 150px;
+		height: 150px;
 		position: relative;
 		overflow: hidden;
 		border-radius: 50%;
@@ -64,10 +65,11 @@
 		}
 
 		img.rounded {
+		display: block;
 		object-fit: cover;
 		border-radius: 50%;
-		height: auto;
-		width: 25%;
+		width: 100%;
+		height: 100%;
 		transition: transform 0.3s ease; /* Smooth scaling for the image */
 		}
 		</style>
