@@ -87,7 +87,8 @@
 			opacity: 1;
 		}
 
-		.image-slider-wrapper img {
+		.image-slider-wrapper img,
+		.image-slider-wrapper video {
 			width: 100%;
         }
 
@@ -96,7 +97,8 @@
 		}
 
 
-        .image-slider img {
+        .image-slider img,
+        .image-slider video {
             flex-shrink: 0;
             width: 100%;
             height: auto;
@@ -276,6 +278,10 @@
 								</header>
 								<div id="scrollable-news">
 									<div class="news-item">
+										<p>09/2026: TEMPO is accepted to CoRL 2026!</p>
+
+										<p>06/2026: UVT is accepted to IROS 2026!</p>
+
 										<p>09/2025: I started my Ph.D. journey in ML/Robotics in UC Irvine!</p>
 
 										<p>04/2025: Nominated for Undergraduate Student Research Award!</p>
@@ -320,6 +326,52 @@
 							</header>
 
 							<div id="scrollable-papers">
+							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+								<div style="flex: 1; padding-right: 1em;">
+									<cite id="TEMPO" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
+										TEMPO: Learning Temporal Context for Dynamic Robot Manipulation
+									</cite>
+									<p style="font-size: medium; text-align: left;">
+										<b>Zhenyang Feng</b>, Jimin Heo, Erik B. Sudderth, Unnat Jain
+									</p>
+									<p style="font-size: medium; text-align: left; margin-top: -1em;">
+										Conference on Robot Learning (<b>CoRL</b>), 2026
+									</p>	
+									<p style="font-size: small; text-align: left; margin-top: -1em;">
+										<a href="https://tempo-robot.github.io/" target="_blank">[project page]</a> 
+										<a href="https://arxiv.org/abs/2609.16864" target="_blank">[arXiv]</a>
+									</p>
+								</div>
+								<div id="image-slider-1" class="image-slider">
+									<div class="image-slider-wrapper">
+										<video autoplay muted loop playsinline src="images/TEMPO/tempo_teaser.mp4"></video>
+									</div>
+								</div>
+							</div>
+
+							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+								<div style="flex: 1; padding-right: 1em;">
+									<cite id="UVT" style="font-size: larger; font-weight: bolder; display: block; text-align: left;">
+										Unified Visuomotor Targets: Supervising VLAs Beyond Physical Actions
+									</cite>
+									<p style="font-size: medium; text-align: left;">
+										<b>Zhenyang Feng</b>, Unnat Jain
+									</p>
+									<p style="font-size: medium; text-align: left; margin-top: -1em;">
+										IEEE/RSJ International Conference on Intelligent Robots and Systems (<b>IROS</b>), 2026
+									</p>	
+									<p style="font-size: small; text-align: left; margin-top: -1em;">
+										<a href="https://unified-visuomotor-targets.github.io/" target="_blank">[project page]</a> 
+										<a href="https://arxiv.org/abs/2608.03563" target="_blank">[arXiv]</a>
+									</p>
+								</div>
+								<div id="image-slider-1" class="image-slider">
+									<div class="image-slider-wrapper">
+										<video autoplay muted loop playsinline src="images/UVT/uvt_teaser.mp4"></video>
+									</div>
+								</div>
+							</div>
+
 							<!-- First Paper with Image Slider -->
 							<div class="paper" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
 								<div style="flex: 1; padding-right: 1em;">
@@ -422,7 +474,7 @@
 						
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; 2025, Daniel Feng. <br /> Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; 2026, Daniel Feng. <br /> Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
