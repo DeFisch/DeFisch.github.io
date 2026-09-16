@@ -77,31 +77,33 @@
 			.image-slider {
             position: relative;
             width: 40%;
+            height: 200px; /* Fixed height so every paper row lines up */
             overflow: hidden;
-            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .image-slider-wrapper {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
 			transition: opacity 1s ease-in-out;
 			opacity: 1;
 		}
-
-		.image-slider-wrapper img,
-		.image-slider-wrapper video {
-			width: 100%;
-        }
 
 		.image-slider-wrapper img:first-child {
 			opacity: 1;
 		}
 
-
         .image-slider img,
         .image-slider video {
             flex-shrink: 0;
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: contain; /* Letterbox media of any aspect ratio */
         }
 
 		#scrollable-news {
@@ -140,7 +142,14 @@
 			.image-slider {
 				width: 100%;
 				height: auto;
+				max-height: 240px;
 				margin-top: 1em;
+			}
+
+			.image-slider img,
+			.image-slider video {
+				height: auto;
+				max-height: 240px;
 			}
 
 			.paper {
