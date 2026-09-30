@@ -20,8 +20,9 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
+	// Play initial animations once the DOM is ready (not on window load, which
+	// waits for every image/video and keeps the header hidden until then).
+		$(function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);

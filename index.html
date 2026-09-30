@@ -199,7 +199,7 @@
 				<!-- Header -->
 				<header id="header" class="alt">
 					<span class="image-cropper">
-						<img src="images/logo.JPG" alt="Zhenyang (Daniel) Feng's Logo" class="rounded"/>
+						<img src="images/logo.JPG" alt="Zhenyang (Daniel) Feng's Logo" class="rounded" fetchpriority="high"/>
 					</span>
 					<h1>Zhenyang (Daniel) Feng</h1>			
 					<a href="https://github.com/DeFisch"><i class="fab fa-github" style="font-size: 40px;"></i></a>&nbsp;&nbsp;
@@ -214,7 +214,6 @@
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
 							<li><a href="#news">News</a></li>
-							<li><a href="#first">Projects</a></li>
 							<li><a href="#second">Publications</a></li>
 						</ul>
 					</nav>
@@ -277,7 +276,7 @@
 											<a href="cv/CV.pdf" class="button">My CV here</a>
 										</ul>
 									</div>
-									<span class="image"><img src="images/pic07.jpg" alt="" /></span>
+									<span class="image"><img src="images/pic07.jpg" alt="" loading="lazy" decoding="async" /></span>
 								</div>
 							</section>
 
@@ -287,6 +286,8 @@
 								</header>
 								<div id="scrollable-news">
 									<div class="news-item">
+										<p>09/2026: Our work is selected for <b>Oral</b> presentation (top 1%) at CoRL 2026!</p>
+
 										<p>09/2026: 1 work accepted at CoRL 2026!</p>
 
 										<p>06/2026: 1 work accepted at IROS 2026!</p>
@@ -300,31 +301,6 @@
 										<p>01/2025: Our work on collaborative driving and label-efficient learning are accepted to ICLR 2025!</p>
 									</div>
 								</div>
-							</section>
-
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Projects 🔨</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="image"><img style="border-radius: 100%;width: 100%;" src="images/pipeline.gif" alt="" /></span>
-										<h3>Buckeye AutoDrive</h3>
-										<p>A four year program to achieve L4 autonomous driving vehicle.</p>
-										<ul class="actions">
-											<a style="margin: auto;" href="AutoDrive.html" class="button">Learn More</a>
-										</ul>
-									</li>
-									<li>
-										<span class="image"><img style="border-radius: 100%;width: 100%;height: 100%;" src="images/SST/SST_project.gif" alt="" /></span>
-										<h3>Imageomics</h3>
-										<p>Machine learning on biological image data to accelerate trait analysis, discovery, and public engagement in science.</p>
-										<!-- <ul class="actions">
-											<a style="margin: auto;" href="AutoDrive.html" class="button">Learn More</a>
-										</ul> -->
-									</li>
-								</ul>
 							</section>
 
 						<!-- Second Section -->
@@ -341,10 +317,10 @@
 										TEMPO: Learning Temporal Context for Dynamic Robot Manipulation
 									</cite>
 									<p style="font-size: medium; text-align: left;">
-										<b>Zhenyang Feng</b>, Jimin Heo, Erik B. Sudderth, Unnat Jain
+										<b>Zhenyang Feng</b>*, Jimin Heo*, Erik B. Sudderth, Unnat Jain
 									</p>
 									<p style="font-size: medium; text-align: left; margin-top: -1em;">
-										Conference on Robot Learning (<b>CoRL</b>), 2026
+										Conference on Robot Learning (<b>CoRL</b>), 2026, <b style="color: #c0392b;">Oral (top 1%)</b>
 									</p>	
 									<p style="font-size: small; text-align: left; margin-top: -1em;">
 										<a href="https://tempo-robot.github.io/" target="_blank">[project page]</a> 
@@ -353,7 +329,7 @@
 								</div>
 								<div id="image-slider-1" class="image-slider">
 									<div class="image-slider-wrapper">
-										<video autoplay muted loop playsinline src="images/TEMPO/tempo_teaser.mp4"></video>
+										<video muted loop playsinline data-src="images/TEMPO/tempo_teaser.mp4"></video>
 									</div>
 								</div>
 							</div>
@@ -376,7 +352,7 @@
 								</div>
 								<div id="image-slider-1" class="image-slider">
 									<div class="image-slider-wrapper">
-										<video autoplay muted loop playsinline src="images/UVT/uvt_teaser.mp4"></video>
+										<video muted loop playsinline data-src="images/UVT/uvt_teaser.mp4"></video>
 									</div>
 								</div>
 							</div>
@@ -401,7 +377,7 @@
 								</div>
 								<div id="image-slider-1" class="image-slider">
 									<div class="image-slider-wrapper">
-										<img src="images/r_and_b/rnbpop-teaser.gif" alt="Publication Image 1">
+										<video muted loop playsinline poster="images/r_and_b/rnbpop-teaser-poster.webp" data-src="images/r_and_b/rnbpop-teaser.mp4"></video>
 									</div>
 								</div>
 							</div>
@@ -426,7 +402,7 @@
 								</div>
 								<div id="image-slider-1" class="image-slider">
 									<div class="image-slider-wrapper">
-										<img src="images/SST/SST.gif" alt="Publication Image 1">
+										<video muted loop playsinline poster="images/SST/SST-poster.webp" data-src="images/SST/SST.mp4"></video>
 									</div>
 								</div>
 							</div>
@@ -448,7 +424,7 @@
 								</div>
 								<div id="image-slider-2" class="image-slider">
 									<div class="image-slider-wrapper">
-										<img src="images/TYP/pipeline.png" alt="Publication Image 1">
+										<img src="images/TYP/pipeline.webp" alt="Publication Image 1" loading="lazy" decoding="async">
 									</div>
 								</div>
 							</div>
@@ -472,7 +448,7 @@
 								</div>
 								<div id="image-slider-2" class="image-slider">
 									<div class="image-slider-wrapper">
-										<img src="images/Fish-Vista/image.png" alt="Publication Image 1">
+										<img src="images/Fish-Vista/image.webp" alt="Publication Image 1" loading="lazy" decoding="async">
 									</div>
 								</div>
 							</div>
@@ -497,5 +473,45 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/background.js"></script>
+			<script>
+				// Teaser videos: fetch the source once a video nears the viewport,
+				// and play it only while at least half of it is on screen.
+				(function() {
+					var videos = document.querySelectorAll('video[data-src]');
+					function load(v) {
+						if (!v.getAttribute('src')) {
+							v.preload = 'auto';
+							v.src = v.dataset.src;
+						}
+					}
+					if (!('IntersectionObserver' in window)) {
+						videos.forEach(function(v) { v.autoplay = true; load(v); });
+						return;
+					}
+					var loader = new IntersectionObserver(function(entries) {
+						entries.forEach(function(entry) {
+							if (entry.isIntersecting) {
+								load(entry.target);
+								loader.unobserve(entry.target);
+							}
+						});
+					}, { rootMargin: '300px 0px' });
+					var player = new IntersectionObserver(function(entries) {
+						entries.forEach(function(entry) {
+							var v = entry.target;
+							if (entry.intersectionRatio >= 0.5) {
+								load(v);
+								v.play().catch(function() {});
+							} else {
+								v.pause();
+							}
+						});
+					}, { threshold: 0.5 });
+					videos.forEach(function(v) {
+						loader.observe(v);
+						player.observe(v);
+					});
+				})();
+			</script>
 	</body>
 </html>
